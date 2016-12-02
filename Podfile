@@ -9,7 +9,7 @@ def all_pods
   pod 'AFNetworking'
 end
 
-target 'BeaconPillow' do
+target 'FloppyPillow' do
   all_pods
 end
 
