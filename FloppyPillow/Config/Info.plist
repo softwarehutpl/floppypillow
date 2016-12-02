@@ -32,5 +32,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>TyphoonInitialAssemblies</key>
+	<array>
+		<string>SessionAssembly</string>
+		<string>DataSourceAssembly</string>
+		<string>WorkflowAssembly</string>
+		<string>ServiceAssembly</string>
+		<string>ViewControllerAssembly</string>
+		<string>ApplicationAssembly</string>
+	</array>
 </dict>
 </plist>

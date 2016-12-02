@@ -7,15 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13B98DE01DF1AB0E0059907F /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B98DDF1DF1AB0E0059907F /* ApplicationAssembly.swift */; };
+		13B98DE21DF1AB1B0059907F /* ViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B98DE11DF1AB1B0059907F /* ViewControllerAssembly.swift */; };
+		13B98DE41DF1AB240059907F /* DataSourceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B98DE31DF1AB240059907F /* DataSourceAssembly.swift */; };
+		13B98DE61DF1AB350059907F /* WorkflowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B98DE51DF1AB350059907F /* WorkflowAssembly.swift */; };
+		13B98DE81DF1AB3B0059907F /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B98DE71DF1AB3B0059907F /* ServiceAssembly.swift */; };
+		13B98DEA1DF1AB410059907F /* SessionAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B98DE91DF1AB410059907F /* SessionAssembly.swift */; };
+		13B98DEC1DF1ACAB0059907F /* ApplicationWorkflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B98DEB1DF1ACAB0059907F /* ApplicationWorkflow.swift */; };
 		13E66C461DF19D2200FF71D6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13E66C361DF19D2200FF71D6 /* Info.plist */; };
 		13E66C471DF19D2200FF71D6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E66C391DF19D2200FF71D6 /* MainViewController.swift */; };
 		13E66C481DF19D2200FF71D6 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E66C3A1DF19D2200FF71D6 /* MainViewController.xib */; };
 		13E66C491DF19D2200FF71D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E66C3E1DF19D2200FF71D6 /* AppDelegate.swift */; };
 		13E66C4A1DF19D2200FF71D6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E66C3F1DF19D2200FF71D6 /* Launch Screen.storyboard */; };
 		13E66C4B1DF19D2200FF71D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E66C431DF19D2200FF71D6 /* Assets.xcassets */; };
+		39923AE57A6870C7F14B31AB /* Pods_FloppyPillow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365DF812022A46B008D0D491 /* Pods_FloppyPillow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13B98DDF1DF1AB0E0059907F /* ApplicationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
+		13B98DE11DF1AB1B0059907F /* ViewControllerAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembly.swift; sourceTree = "<group>"; };
+		13B98DE31DF1AB240059907F /* DataSourceAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceAssembly.swift; sourceTree = "<group>"; };
+		13B98DE51DF1AB350059907F /* WorkflowAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkflowAssembly.swift; sourceTree = "<group>"; };
+		13B98DE71DF1AB3B0059907F /* ServiceAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
+		13B98DE91DF1AB410059907F /* SessionAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionAssembly.swift; sourceTree = "<group>"; };
+		13B98DEB1DF1ACAB0059907F /* ApplicationWorkflow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationWorkflow.swift; sourceTree = "<group>"; };
 		13E66C201DF19CF400FF71D6 /* FloppyPillow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloppyPillow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E66C361DF19D2200FF71D6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13E66C391DF19D2200FF71D6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -23,6 +38,9 @@
 		13E66C3E1DF19D2200FF71D6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13E66C3F1DF19D2200FF71D6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		13E66C431DF19D2200FF71D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		365DF812022A46B008D0D491 /* Pods_FloppyPillow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FloppyPillow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2728590AF75124D123DAC66 /* Pods-FloppyPillow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FloppyPillow.release.xcconfig"; path = "Pods/Target Support Files/Pods-FloppyPillow/Pods-FloppyPillow.release.xcconfig"; sourceTree = "<group>"; };
+		F60F626D96015710A424DD91 /* Pods-FloppyPillow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FloppyPillow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FloppyPillow/Pods-FloppyPillow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,17 +48,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39923AE57A6870C7F14B31AB /* Pods_FloppyPillow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13B98DDE1DF1AADA0059907F /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				13B98DDF1DF1AB0E0059907F /* ApplicationAssembly.swift */,
+				13B98DE11DF1AB1B0059907F /* ViewControllerAssembly.swift */,
+				13B98DE31DF1AB240059907F /* DataSourceAssembly.swift */,
+				13B98DE51DF1AB350059907F /* WorkflowAssembly.swift */,
+				13B98DE71DF1AB3B0059907F /* ServiceAssembly.swift */,
+				13B98DE91DF1AB410059907F /* SessionAssembly.swift */,
+			);
+			path = Assemblies;
+			sourceTree = "<group>";
+		};
 		13E66C171DF19CF400FF71D6 = {
 			isa = PBXGroup;
 			children = (
 				13E66C221DF19CF400FF71D6 /* FloppyPillow */,
 				13E66C211DF19CF400FF71D6 /* Products */,
+				17EB3977372CEA73C9548966 /* Pods */,
+				41E0B70AE46E70AC15AAF2A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				13E66C3D1DF19D2200FF71D6 /* Init */,
+				13B98DDE1DF1AADA0059907F /* Assemblies */,
 				13E66C371DF19D2200FF71D6 /* GUI */,
 				13E66C401DF19D2200FF71D6 /* Models */,
 				13E66C451DF19D2200FF71D6 /* Workflows */,
@@ -149,8 +184,26 @@
 		13E66C451DF19D2200FF71D6 /* Workflows */ = {
 			isa = PBXGroup;
 			children = (
+				13B98DEB1DF1ACAB0059907F /* ApplicationWorkflow.swift */,
 			);
 			path = Workflows;
+			sourceTree = "<group>";
+		};
+		17EB3977372CEA73C9548966 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F60F626D96015710A424DD91 /* Pods-FloppyPillow.debug.xcconfig */,
+				C2728590AF75124D123DAC66 /* Pods-FloppyPillow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		41E0B70AE46E70AC15AAF2A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				365DF812022A46B008D0D491 /* Pods_FloppyPillow.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13E66C321DF19CF400FF71D6 /* Build configuration list for PBXNativeTarget "FloppyPillow" */;
 			buildPhases = (
+				9EA2B5B2C4B352FAE3D84F7F /* [CP] Check Pods Manifest.lock */,
 				13E66C1C1DF19CF400FF71D6 /* Sources */,
 				13E66C1D1DF19CF400FF71D6 /* Frameworks */,
 				13E66C1E1DF19CF400FF71D6 /* Resources */,
+				A9B6CC62A36922D2F62AD0A6 /* [CP] Embed Pods Frameworks */,
+				8E5B69D36F719EE3AE338FB9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,12 +278,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8E5B69D36F719EE3AE338FB9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FloppyPillow/Pods-FloppyPillow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EA2B5B2C4B352FAE3D84F7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A9B6CC62A36922D2F62AD0A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FloppyPillow/Pods-FloppyPillow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		13E66C1C1DF19CF400FF71D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B98DE61DF1AB350059907F /* WorkflowAssembly.swift in Sources */,
+				13B98DEC1DF1ACAB0059907F /* ApplicationWorkflow.swift in Sources */,
+				13B98DE41DF1AB240059907F /* DataSourceAssembly.swift in Sources */,
 				13E66C491DF19D2200FF71D6 /* AppDelegate.swift in Sources */,
+				13B98DE81DF1AB3B0059907F /* ServiceAssembly.swift in Sources */,
+				13B98DEA1DF1AB410059907F /* SessionAssembly.swift in Sources */,
+				13B98DE01DF1AB0E0059907F /* ApplicationAssembly.swift in Sources */,
+				13B98DE21DF1AB1B0059907F /* ViewControllerAssembly.swift in Sources */,
 				13E66C471DF19D2200FF71D6 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +439,7 @@
 		};
 		13E66C331DF19CF400FF71D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F60F626D96015710A424DD91 /* Pods-FloppyPillow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H5DTA27T4L;
@@ -341,6 +453,7 @@
 		};
 		13E66C341DF19CF400FF71D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2728590AF75124D123DAC66 /* Pods-FloppyPillow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H5DTA27T4L;
@@ -371,6 +484,7 @@
 				13E66C341DF19CF400FF71D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
