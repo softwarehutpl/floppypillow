@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OneDriveSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
         applicationWorkflow.startApp()
+        
+        ODClient.client { (client, error) in
+            if let _ = error {
+                return
+            }
+        }
+        
         return true
     }
 
