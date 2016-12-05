@@ -19,9 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         let viewController = MainViewController(nibName: "MainViewController", bundle: Bundle.main)
         let navController = UINavigationController(rootViewController: viewController)
-        window?.rootViewController = navController
+        window = applicationWorkflow.startApp()
         window?.makeKeyAndVisible()
-        applicationWorkflow.startApp()
+        
         return true
     }
 

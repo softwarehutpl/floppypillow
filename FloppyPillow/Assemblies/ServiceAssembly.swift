@@ -10,5 +10,9 @@ import Foundation
 import Typhoon
 
 class ServiceAssembly : TyphoonAssembly {
-    
+    dynamic func beaconsManagerService() -> Any {
+        return TyphoonDefinition.withClass(BeaconsManagerService.self) {
+            definition in
+        }
+    }
 }
