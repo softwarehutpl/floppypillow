@@ -11,6 +11,12 @@ import CoreLocation
 
 class BeaconsNativeService: NSObject {
     var beaconManager: CLLocationManager!
+    var beaconRegion: CLBeaconRegion!
+    var closestBeacon: CLBeacon!
+    var startDate: Date?
+    var endDate: Date?
+    var timeSpent: TimeInterval?
+    var timer: Timer?
     
     override init(){
         super.init()
@@ -23,15 +29,14 @@ class BeaconsNativeService: NSObject {
     }
     
     func startMonitoring(){
-        let region: CLBeaconRegion!
         let uuid: UUID!
         uuid = UUID(uuidString: "f7826da6-4fa2-4e98-8024-bc5b71e0893e")
-        region = CLBeaconRegion(proximityUUID: uuid, major: 44087, identifier: "My ID")
-        region.notifyOnEntry = true
-        region.notifyOnExit = true
+        beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: 44087, identifier: "My ID")
+        beaconRegion.notifyOnEntry = true
+        beaconRegion.notifyOnExit = true
         beaconManager.startUpdatingLocation()
-        beaconManager.startMonitoring(for: region)
-        beaconManager.startRangingBeacons(in: region)
+        beaconManager.startMonitoring(for: beaconRegion)
+        beaconManager.startRangingBeacons(in: beaconRegion)
     }
 }
 
@@ -46,7 +51,7 @@ extension BeaconsNativeService: CLLocationManagerDelegate{
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        
+
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
@@ -55,18 +60,32 @@ extension BeaconsNativeService: CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         if beacons.count > 0 {
-            var closestBeacon: CLBeacon!
             for beacon: CLBeacon in beacons {
-                if closestBeacon == nil{
+                if (closestBeacon == nil && beacon.rssi != 0 && beacon.accuracy <= 1.0){
                     closestBeacon = beacon
+                    startDate = Date()
                 }
                 
-                if (closestBeacon.rssi > beacon.rssi && beacon.rssi != 0){
-                    closestBeacon = beacon
+                if let newBeacon = closestBeacon {
+                    if (newBeacon.rssi > beacon.rssi && beacon.rssi != 0){
+                        closestBeacon = beacon
+                    }
+                }
+                
+            }
+            if (closestBeacon != nil){
+                print(closestBeacon)
+                
+                if(closestBeacon.accuracy > 1.0){
+                    endDate = Date()
+                    
+                    timeSpent = endDate?.timeIntervalSince(startDate!)
+                    print("You have been sleeping for: \(timeSpent)")
+                    closestBeacon = nil
+                    endDate = nil
+                    startDate = nil
                 }
             }
-            
-            print(closestBeacon)
         }
     }
 }
