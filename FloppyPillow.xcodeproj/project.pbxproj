@@ -20,9 +20,9 @@
 		13E66C491DF19D2200FF71D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E66C3E1DF19D2200FF71D6 /* AppDelegate.swift */; };
 		13E66C4A1DF19D2200FF71D6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E66C3F1DF19D2200FF71D6 /* Launch Screen.storyboard */; };
 		13E66C4B1DF19D2200FF71D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E66C431DF19D2200FF71D6 /* Assets.xcassets */; };
+		13F56B661DF6B76B00FAE420 /* BeaconsManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F56B631DF6B76B00FAE420 /* BeaconsManagerService.swift */; };
+		13F56B671DF6B76B00FAE420 /* BeaconsManagerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F56B651DF6B76B00FAE420 /* BeaconsManagerSession.swift */; };
 		39923AE57A6870C7F14B31AB /* Pods_FloppyPillow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365DF812022A46B008D0D491 /* Pods_FloppyPillow.framework */; };
-		8B9453CB1DF1B28900CD489C /* BeaconsManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9453CA1DF1B28900CD489C /* BeaconsManagerService.swift */; };
-		8B9453CE1DF5603D00CD489C /* BeaconsManagerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9453CD1DF5603D00CD489C /* BeaconsManagerSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,9 +40,9 @@
 		13E66C3E1DF19D2200FF71D6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13E66C3F1DF19D2200FF71D6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		13E66C431DF19D2200FF71D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13F56B631DF6B76B00FAE420 /* BeaconsManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconsManagerService.swift; sourceTree = "<group>"; };
+		13F56B651DF6B76B00FAE420 /* BeaconsManagerSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconsManagerSession.swift; sourceTree = "<group>"; };
 		365DF812022A46B008D0D491 /* Pods_FloppyPillow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FloppyPillow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B9453CA1DF1B28900CD489C /* BeaconsManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconsManagerService.swift; sourceTree = "<group>"; };
-		8B9453CD1DF5603D00CD489C /* BeaconsManagerSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconsManagerSession.swift; sourceTree = "<group>"; };
 		C2728590AF75124D123DAC66 /* Pods-FloppyPillow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FloppyPillow.release.xcconfig"; path = "Pods/Target Support Files/Pods-FloppyPillow/Pods-FloppyPillow.release.xcconfig"; sourceTree = "<group>"; };
 		F60F626D96015710A424DD91 /* Pods-FloppyPillow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FloppyPillow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FloppyPillow/Pods-FloppyPillow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,13 +93,13 @@
 		13E66C221DF19CF400FF71D6 /* FloppyPillow */ = {
 			isa = PBXGroup;
 			children = (
-				8B9453CC1DF55FAA00CD489C /* Sessions */,
-				8B9453C91DF1B27000CD489C /* Services */,
 				13E66C3D1DF19D2200FF71D6 /* Init */,
 				13B98DDE1DF1AADA0059907F /* Assemblies */,
 				13E66C371DF19D2200FF71D6 /* GUI */,
 				13E66C401DF19D2200FF71D6 /* Models */,
 				13E66C451DF19D2200FF71D6 /* Workflows */,
+				13F56B621DF6B76B00FAE420 /* Services */,
+				13F56B641DF6B76B00FAE420 /* Sessions */,
 				13E66C441DF19D2200FF71D6 /* System */,
 				13E66C421DF19D2200FF71D6 /* Resources */,
 				13E66C351DF19D2200FF71D6 /* Config */,
@@ -195,6 +195,22 @@
 			path = Workflows;
 			sourceTree = "<group>";
 		};
+		13F56B621DF6B76B00FAE420 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				13F56B631DF6B76B00FAE420 /* BeaconsManagerService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		13F56B641DF6B76B00FAE420 /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				13F56B651DF6B76B00FAE420 /* BeaconsManagerSession.swift */,
+			);
+			path = Sessions;
+			sourceTree = "<group>";
+		};
 		17EB3977372CEA73C9548966 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,22 +226,6 @@
 				365DF812022A46B008D0D491 /* Pods_FloppyPillow.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8B9453C91DF1B27000CD489C /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				8B9453CA1DF1B28900CD489C /* BeaconsManagerService.swift */,
-			);
-			name = Services;
-			sourceTree = "<group>";
-		};
-		8B9453CC1DF55FAA00CD489C /* Sessions */ = {
-			isa = PBXGroup;
-			children = (
-				8B9453CD1DF5603D00CD489C /* BeaconsManagerSession.swift */,
-			);
-			name = Sessions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,7 +333,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A9B6CC62A36922D2F62AD0A6 /* [CP] Embed Pods Frameworks */ = {
@@ -367,8 +367,8 @@
 				13B98DE01DF1AB0E0059907F /* ApplicationAssembly.swift in Sources */,
 				13B98DE21DF1AB1B0059907F /* ViewControllerAssembly.swift in Sources */,
 				13E66C471DF19D2200FF71D6 /* MainViewController.swift in Sources */,
-				8B9453CB1DF1B28900CD489C /* BeaconsManagerService.swift in Sources */,
-				8B9453CE1DF5603D00CD489C /* BeaconsManagerSession.swift in Sources */,
+				13F56B661DF6B76B00FAE420 /* BeaconsManagerService.swift in Sources */,
+				13F56B671DF6B76B00FAE420 /* BeaconsManagerSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
