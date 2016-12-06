@@ -10,6 +10,21 @@ import Foundation
 
 class Journal {
     
-    var entries: [JournalEntry]?
+    var entries = [JournalEntry]()
+    
+    var summary: String {
+        get {
+            guard entries.count > 0 else {
+                return "Brak wpisów"
+            }
+            var retVal = ""
+            
+            for entry in entries {
+                retVal += "\(entry.summary)\n"
+            }
+            
+            return retVal
+        }
+    }
     
 }
