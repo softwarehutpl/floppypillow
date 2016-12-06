@@ -8,52 +8,75 @@
 
 import UIKit
 import CoreLocation
+import KontaktSDK
 
 class BeaconsManagerService: NSObject {
 
-    var beaconManager: CLLocationManager!
+    var beaconManager: KTKBeaconManager!
     
     override init(){
         super.init()
     }
     
     func requestAuthorization(){
-        beaconManager = CLLocationManager.init()
-        beaconManager.delegate = self
-        beaconManager.requestAlwaysAuthorization()
+        beaconManager = KTKBeaconManager(delegate: self)
+        
+        switch KTKBeaconManager.locationAuthorizationStatus() {
+        case .notDetermined:
+            beaconManager?.requestLocationAlwaysAuthorization()
+        case .denied, .restricted:
+            print("No access")
+        case .authorizedWhenInUse:
+            beaconManager?.requestLocationWhenInUseAuthorization()
+        case .authorizedAlways:
+            print("Started monitoring regions")
+            startMonitoring()
+        }
     }
     
     func startMonitoring(){
-        let region: CLBeaconRegion!
-        let region2: CLRegion!
+        let region: KTKBeaconRegion!
         let uuid: UUID!
-        uuid = UUID(uuidString: "f7826da6-4fa2-4e98-8024-bc5b71e0893e")
-        region = CLBeaconRegion(proximityUUID: uuid, major: 64681, identifier: "My Identifier")
-        beaconManager.startUpdatingLocation()
+        uuid = UUID.init(uuidString: "f7826da6-4fa2-4e98-8024-bc5b71e0893e")
+        region = KTKBeaconRegion(proximityUUID: uuid, major: 44087, identifier: "My Identifier")
+        region.notifyOnEntry = true
+        region.notifyOnExit = true
+        region.notifyEntryStateOnDisplay = true
         beaconManager.startMonitoring(for: region)
-//        beaconManager.startRangingBeacons(in: region)
+        beaconManager.startRangingBeacons(in: region)
     }
 }
 
-extension BeaconsManagerService: CLLocationManagerDelegate{
+extension BeaconsManagerService: KTKBeaconManagerDelegate{
     
-    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
+    func beaconManager(_ manager: KTKBeaconManager, didDetermineState state: CLRegionState, for region: KTKBeaconRegion){
+        if (state == .inside){
+           self.beaconManager.delegate?.beaconManager!(manager, didEnter: region)
+        }else if(state == .outside){
+            self.beaconManager.delegate?.beaconManager!(manager, didExitRegion: region)
+        }
     }
     
-    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+    func beaconManager(_ manager: KTKBeaconManager, didEnter region: KTKBeaconRegion) {
         print("did enter region: \(region.identifier)")
-        beaconManager.startRangingBeacons(in: region as! CLBeaconRegion)
+        beaconManager.startRangingBeacons(in: region)
     }
     
-    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+    func beaconManager(_ manager: KTKBeaconManager, didExitRegion region: KTKBeaconRegion) {
         print("did exit region: \(region.identifier)")
+//        beaconManager.stopRangingBeacons(in: region)
     }
     
-    func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+    func beaconManager(_ manager: KTKBeaconManager, didRangeBeacons beacons: [CLBeacon], in region: KTKBeaconRegion) {
         print("did range beacons: \(beacons)")
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    func beaconManager(_ manager: KTKBeaconManager, didChangeLocationAuthorizationStatus status: CLAuthorizationStatus) {
         startMonitoring()
     }
+    
+    func beaconManager(_ manager: KTKBeaconManager, didStartMonitoringFor region: KTKBeaconRegion) {
+        manager.requestState(for: region)
+    }
+    
 }

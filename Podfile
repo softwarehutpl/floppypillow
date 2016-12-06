@@ -7,6 +7,7 @@ platform :ios, '10.0'
 def all_pods
   pod 'Typhoon'
   pod 'AFNetworking'
+  pod 'KontaktSDK'
 end
 
 target 'FloppyPillow' do
