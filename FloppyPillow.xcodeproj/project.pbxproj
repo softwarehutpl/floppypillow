@@ -23,6 +23,7 @@
 		13F56B661DF6B76B00FAE420 /* BeaconsManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F56B631DF6B76B00FAE420 /* BeaconsManagerService.swift */; };
 		13F56B671DF6B76B00FAE420 /* BeaconsManagerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F56B651DF6B76B00FAE420 /* BeaconsManagerSession.swift */; };
 		39923AE57A6870C7F14B31AB /* Pods_FloppyPillow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365DF812022A46B008D0D491 /* Pods_FloppyPillow.framework */; };
+		8B03D7151DF6B8150015BF0E /* BeaconsNativeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03D7141DF6B8150015BF0E /* BeaconsNativeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		13F56B631DF6B76B00FAE420 /* BeaconsManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconsManagerService.swift; sourceTree = "<group>"; };
 		13F56B651DF6B76B00FAE420 /* BeaconsManagerSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconsManagerSession.swift; sourceTree = "<group>"; };
 		365DF812022A46B008D0D491 /* Pods_FloppyPillow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FloppyPillow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B03D7141DF6B8150015BF0E /* BeaconsNativeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconsNativeService.swift; sourceTree = "<group>"; };
 		C2728590AF75124D123DAC66 /* Pods-FloppyPillow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FloppyPillow.release.xcconfig"; path = "Pods/Target Support Files/Pods-FloppyPillow/Pods-FloppyPillow.release.xcconfig"; sourceTree = "<group>"; };
 		F60F626D96015710A424DD91 /* Pods-FloppyPillow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FloppyPillow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FloppyPillow/Pods-FloppyPillow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				13F56B631DF6B76B00FAE420 /* BeaconsManagerService.swift */,
+				8B03D7141DF6B8150015BF0E /* BeaconsNativeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				13B98DEA1DF1AB410059907F /* SessionAssembly.swift in Sources */,
 				13B98DE01DF1AB0E0059907F /* ApplicationAssembly.swift in Sources */,
 				13B98DE21DF1AB1B0059907F /* ViewControllerAssembly.swift in Sources */,
+				8B03D7151DF6B8150015BF0E /* BeaconsNativeService.swift in Sources */,
 				13E66C471DF19D2200FF71D6 /* MainViewController.swift in Sources */,
 				13F56B661DF6B76B00FAE420 /* BeaconsManagerService.swift in Sources */,
 				13F56B671DF6B76B00FAE420 /* BeaconsManagerSession.swift in Sources */,

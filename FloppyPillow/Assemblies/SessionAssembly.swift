@@ -15,11 +15,11 @@ class SessionAssembly : TyphoonAssembly {
     dynamic func beaconsManagerSession() -> Any{
         return TyphoonDefinition.withClass(BeaconsManagerSession.self){
             definition in
-           definition?.useInitializer(#selector(BeaconsManagerSession.init(service:))){ [unowned self]
+            definition?.useInitializer(#selector(BeaconsManagerSession.init(service:nativeBeaconsService:))){ [unowned self]
                 initializer in
-               initializer?.injectParameter(with: self.serviceAssembly.beaconsManagerService())
+                initializer?.injectParameter(with: self.serviceAssembly.beaconsManagerService())
+                initializer?.injectParameter(with: self.serviceAssembly.beaconsNativeService())
            }
-//            definition?.injectProperty(#selector(getter: BeaconsManagerSession.beaconsService), with: self.serviceAssembly.beaconsManagerService())
             definition?.scope = TyphoonScope.singleton
         }
     }

@@ -10,8 +10,10 @@ import UIKit
 
 class BeaconsManagerSession: NSObject {
     let beaconsService: BeaconsManagerService!
+    let nativeService: BeaconsNativeService!
     
-    init(service: BeaconsManagerService){
+    init(service: BeaconsManagerService, nativeBeaconsService: BeaconsNativeService){
         beaconsService = service
+        nativeService = nativeBeaconsService
     }
 }

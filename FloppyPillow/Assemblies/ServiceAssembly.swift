@@ -15,4 +15,10 @@ class ServiceAssembly : TyphoonAssembly {
             definition in
         }
     }
+    
+    dynamic func beaconsNativeService() -> Any {
+        return TyphoonDefinition.withClass(BeaconsNativeService.self) {
+            definition in
+        }
+    }
 }

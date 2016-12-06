@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Main"
-        locationManager?.beaconsService.requestAuthorization()
+        locationManager?.nativeService.requestAuthorization()
     }
 
     override func didReceiveMemoryWarning() {
