@@ -10,6 +10,6 @@ import Foundation
 
 class Journal {
     
-    
+    var entries: [JournalEntry]?
     
 }

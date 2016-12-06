@@ -16,13 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var applicationWorkflow: ApplicationWorkflow!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = MainViewController(nibName: "MainViewController", bundle: Bundle.main)
-        let navController = UINavigationController(rootViewController: viewController)
         window = applicationWorkflow.startApp()
         window?.makeKeyAndVisible()
-    
         return true
     }
 

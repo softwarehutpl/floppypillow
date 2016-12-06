@@ -24,6 +24,7 @@
 		13F56B671DF6B76B00FAE420 /* BeaconsManagerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F56B651DF6B76B00FAE420 /* BeaconsManagerSession.swift */; };
 		13F56B691DF6B86600FAE420 /* SynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F56B681DF6B86600FAE420 /* SynchronizationService.swift */; };
 		13F56B6B1DF6B92C00FAE420 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F56B6A1DF6B92C00FAE420 /* Journal.swift */; };
+		13F56B6D1DF6BF5700FAE420 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F56B6C1DF6BF5700FAE420 /* JournalEntry.swift */; };
 		39923AE57A6870C7F14B31AB /* Pods_FloppyPillow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365DF812022A46B008D0D491 /* Pods_FloppyPillow.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		13F56B651DF6B76B00FAE420 /* BeaconsManagerSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconsManagerSession.swift; sourceTree = "<group>"; };
 		13F56B681DF6B86600FAE420 /* SynchronizationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynchronizationService.swift; sourceTree = "<group>"; };
 		13F56B6A1DF6B92C00FAE420 /* Journal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		13F56B6C1DF6BF5700FAE420 /* JournalEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
 		365DF812022A46B008D0D491 /* Pods_FloppyPillow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FloppyPillow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2728590AF75124D123DAC66 /* Pods-FloppyPillow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FloppyPillow.release.xcconfig"; path = "Pods/Target Support Files/Pods-FloppyPillow/Pods-FloppyPillow.release.xcconfig"; sourceTree = "<group>"; };
 		F60F626D96015710A424DD91 /* Pods-FloppyPillow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FloppyPillow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FloppyPillow/Pods-FloppyPillow.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				13F56B6A1DF6B92C00FAE420 /* Journal.swift */,
+				13F56B6C1DF6BF5700FAE420 /* JournalEntry.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -331,7 +334,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A9B6CC62A36922D2F62AD0A6 /* [CP] Embed Pods Frameworks */ = {
@@ -368,6 +371,7 @@
 				13F56B6B1DF6B92C00FAE420 /* Journal.swift in Sources */,
 				13E66C471DF19D2200FF71D6 /* MainViewController.swift in Sources */,
 				13F56B661DF6B76B00FAE420 /* BeaconsManagerService.swift in Sources */,
+				13F56B6D1DF6BF5700FAE420 /* JournalEntry.swift in Sources */,
 				13F56B671DF6B76B00FAE420 /* BeaconsManagerSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
