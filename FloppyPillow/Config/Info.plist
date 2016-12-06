@@ -20,6 +20,21 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>The app wants to use Location Service.</string>
+	<key>TyphoonInitialAssemblies</key>
+	<array>
+		<string>SessionAssembly</string>
+		<string>DataSourceAssembly</string>
+		<string>WorkflowAssembly</string>
+		<string>ServiceAssembly</string>
+		<string>ViewControllerAssembly</string>
+		<string>ApplicationAssembly</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -31,15 +46,6 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>TyphoonInitialAssemblies</key>
-	<array>
-		<string>SessionAssembly</string>
-		<string>DataSourceAssembly</string>
-		<string>WorkflowAssembly</string>
-		<string>ServiceAssembly</string>
-		<string>ViewControllerAssembly</string>
-		<string>ApplicationAssembly</string>
 	</array>
 </dict>
 </plist>

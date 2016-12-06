@@ -8,6 +8,7 @@ def all_pods
   pod 'Typhoon'
   pod 'AFNetworking'
   pod 'OneDriveSDK'
+  pod 'KontaktSDK'
 end
 
 target 'FloppyPillow' do
